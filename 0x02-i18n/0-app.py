@@ -7,7 +7,7 @@ app = flask(__name__)
 
 
 @app.route('/')
-def root():
+def root() -> str:
     """flask app"""
     return render_template('0-index.html')
 
