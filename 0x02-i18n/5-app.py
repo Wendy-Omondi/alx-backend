@@ -37,6 +37,7 @@ def get_locale() -> str:
     else:
         return request.accept_languages.best_match(app.config['LANGUAGES'])
 
+
 def get_user() -> Union[dict, None]:
     """returns user from dictionary"""
     try:
@@ -44,6 +45,7 @@ def get_user() -> Union[dict, None]:
         return users[int(userId)]
     except Exception:
         return None
+
 
 @app.before_request
 def before_request(login_as: int = None):
